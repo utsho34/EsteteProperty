@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="estate_menu_root" name="Real Estate">
+        <menuitem id="estate_advertisement_menu" name="Advertisements" sequence="5">
+            <menuitem id="estate_property_menu_action" action="estate_property_action" sequence="5"/>
+            <menuitem id="menu_action_buyer_report_wizard" action="action_buyer_report_wizard" sequence="5"/>
+
+        </menuitem>
+
+        <menuitem id="estate_settings_menu" name="Settings" sequence="10">
+            <menuitem id="estate_property_type_menu_action" action="estate_property_type_action" sequence="5"/>
+            <menuitem id="estate_property_tag_menu_action" action="estate_property_tag_action" sequence="10"/>
+        </menuitem>
+
+<!--        <menuitem id="estate_report_menu" name="Reports" sequence="15">-->
+<!--            -->
+<!--        </menuitem>-->
+
+
+
+
+    </menuitem>
+    <menuitem id="menu_custom_reports"
+         name="Reports"
+         parent="estate_menu_root"
+         sequence="20"/>
+    <menuitem id="menu_custom_report"
+         name="Custom Report"
+         parent="menu_custom_reports"
+         action="action_custom_report"
+         sequence="20"/>
+
+
+    <!--    <menuitem id ="menu_action_custom_report_wizard" name ="Custom Report" parent="estate_advertisement_menu"-->
+    <!--                  action="action_custom_report_wizard"/>-->
+    <!--    <menuitem id="menu_customer_details_report"-->
+    <!--         name="Custom Report"-->
+    <!--         parent="estate_menu_root"-->
+    <!--         action="action_custom_report_wizard"-->
+    <!--         sequence="0"/>-->
+</odoo>

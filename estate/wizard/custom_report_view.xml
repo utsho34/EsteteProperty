@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<odoo>
+
+<!--    <record id="action_custom_report_wizard" model="ir.actions.act_window">-->
+<!--        <field name="name">Custom Report</field>-->
+<!--        <field name="res_model">custom.report.wizard</field>-->
+<!--        <field name="view_mode">form</field>-->
+<!--        <field name = 'target'>new</field>-->
+<!--    </record>-->
+
+
+<!--    <record id="view_custom_report_wizard_form" model="ir.ui.view">-->
+<!--        <field name="name">custom.report.wizard.form</field>-->
+<!--        <field name="model">custom.report.wizard</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form>-->
+<!--                <group>-->
+<!--                    <field name = 'row_no'/>-->
+<!--                    <field name = 'col_no'/>-->
+
+<!--                </group>-->
+<!--                <footer>-->
+<!--                    <button name = "action_print_report" type = 'object' string="Print" class = 'btn-primary'/>-->
+<!--&lt;!&ndash;                    <button name="action_xls_report" string="Exel" type="object" class="oe_highlight" />&ndash;&gt;-->
+<!--                    <button string = 'cancel' class="btn-secondary" special = 'cancel'/>-->
+<!--                </footer>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+
+
+</odoo>

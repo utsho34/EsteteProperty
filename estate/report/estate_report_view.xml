@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_estate_property" model="ir.actions.report">
+            <field name="name">Property Offers</field>
+            <field name="model">estate.property</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">estate.report_property</field>
+            <field name="report_file">estate.report_property</field>
+            <field name="print_report_name">'Property Offers'</field>
+            <field name="binding_model_id" ref="model_estate_property"/>
+        </record>
+    </data>
+
+    <data>
+        <record id="action_report_buyer_report_wizard" model="ir.actions.report">
+            <field name="name">Buyer</field>
+            <field name="model">estate.property</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">estate.report_buyer_report_wizard</field>
+            <field name="report_file">estate.report_buyer_report_wizard</field>
+            <field name="print_report_name">'Buyer Property'</field>
+            <field name="binding_model_id" ref="model_buyer_report_wizard"/>
+        </record>
+    </data>
+
+    <data>
+    <record id="action_report_seller_report_wizard" model="ir.actions.report">
+        <field name="name">Seller</field>
+        <field name="model">estate.property</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">estate.report_seller_report_wizard</field>
+        <field name="report_file">estate.report_seller_report_wizard</field>
+        <field name="print_report_name">'Seller Property'</field>
+        <field name="binding_model_id" ref="model_buyer_report_wizard"/>
+    </record>
+    </data>
+
+    <data>
+        <record id="action_report_seller_report_wizard_xlsx" model="ir.actions.report">
+            <field name="name">Buyer Or Seller</field>
+            <field name="model">buyer.report.wizard</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">estate.report_seller_report_wizard_xlsx</field>
+            <field name="report_file">estate.report_seller_report_wizard_xlsx</field>
+            <field name="print_report_name">'Details'</field>
+            <field name="binding_model_id" ref="model_buyer_report_wizard"/>
+            <field name = 'binding_type' >report</field>
+        </record>
+    </data>
+<!--    <report id = 'report_custom_report_xlx'-->
+<!--            string="Custom Report"-->
+<!--            model="custom.report"-->
+<!--            report_type = 'xlsx'-->
+<!--            name = 'estate.report_custom_report_xlsx'-->
+<!--            file = 'estate.report_custom_report_xlsx'/>-->
+
+    <data>
+        <record id="action_report_custom_report_xlx" model="ir.actions.report">
+            <field name="name">Custom Report</field>
+            <field name="model">report.custom.report.custom</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">custom.report.custom</field>
+            <field name="report_file">custom.report.custom</field>
+            <field name="print_report_name">'Details'</field>
+            <field name="binding_model_id" ref="model_report_custom_report_custom"/>
+            <field name='binding_type'>report</field>
+        </record>
+    </data>
+
+
+
+</odoo>

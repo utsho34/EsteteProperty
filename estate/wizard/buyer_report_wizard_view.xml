@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="action_buyer_report_wizard" model="ir.actions.act_window">
+        <field name="name">Reports</field>
+        <field name="res_model">buyer.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name = 'target'>new</field>
+    </record>
+    <record id="view_buyer_report_wizard_form" model="ir.ui.view">
+        <field name="name">buyer.report.wizard.form</field>
+        <field name="model">buyer.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="report_type"/>
+                        <field name = "report_ver"/>
+                        <field name = 'tag' widget="many2one_tags" options="{'no_create': True}"/>
+                        <field name = 'type' widget="one2many_tags" options="{'no_create': True}"/>
+                    </group>
+                    <group>
+                        <field name = 'buyer_id' widget="many2many_tags" attrs="{'invisible': ['|',('report_type', '!=', 'buyer'),('buyer_all','=',True)]}" options="{'no_create': True}"/>
+                        <field name = 'buyer_all' attrs="{'invisible': [('report_type', '!=', 'buyer')]}"/>
+                        <field name = 'user_id' widget="many2many_tags" attrs="{'invisible': ['|',('report_type', '!=', 'seller'),('seller_all','=',True)]}" options="{'no_create': True}"/>
+                        <field name = 'seller_all' attrs="{'invisible': [('report_type', '!=', 'seller')]}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name = "action_print_report" type = 'object' string="Print" class = 'btn-primary'/>
+<!--                    <button name="action_xls_report" string="Exel" type="object" class="oe_highlight" />-->
+                    <button string = 'cancel' class="btn-secondary" special = 'cancel'/>
+                </footer>
+
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
